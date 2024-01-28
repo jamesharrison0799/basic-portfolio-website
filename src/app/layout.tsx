@@ -16,7 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        <main className="flex flex-col justify-center items-center relative overflow-hidden">
+         <div className="amazing-rays"></div>
+
+          {children}
+
+        </main>
+      </body>
     </html>
   );
 }

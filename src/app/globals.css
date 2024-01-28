@@ -2,3 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+.img-overlay {
+    position: relative;
+    overflow: hidden
+}
+
+.amazing-rays,.img-overlay:after {
+    background-image: url("/download.gif")
+}
+
+.img-overlay:after {
+    content: "";
+    background-size: 126% 115%;
+    opacity: 15%;
+    --tw-blur: blur(60px);
+    filter: blur(8px) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.amazing-rays,.img-overlay:after {
+    pointer-events: none;
+    position: absolute;
+    inset: 0
+}
+
+.amazing-rays {
+    mix-blend-mode: exclusion;
+    background-size: 1589px 383px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 90px) top;
+    opacity: .3;
+    filter: hue-rotate(540deg) saturate(7.3);
+    animation: rotate-hue 20s ease-out infinite
+}
+
+.dark .amazing-rays {
+    opacity: .35
+}
+
+@keyframes rotate-hue {
+    0% {
+        filter: hue-rotate(540deg) saturate(7.3);
+        --accent-color: red
+    }
+
+    50% {
+        --accent-color: green
+    }
+
+    to {
+        filter: hue-rotate(180deg) saturate(7.3)
+    }
+}
