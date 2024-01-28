@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 
 function HeaderAnimation() {
   return (
-    <div className="absolute pointer-events-none scale-x-150 -top-32  flex  justify-center opacity-60 w-full ">
+    <div className="absolute pointer-events-none scale-x-150 -top-32  flex  justify-center opacity-40 w-full ">
+      
       <div className="flex -space-y-5 amazing-rays ">
         <div className=" h-96 w-32 bg-pink-500 scale-y-150 blur-lg -rotate-45"></div>
         <div className=" h-96 w-48 bg-red-500  scale-y-150 blur-2xl -rotate-45"></div>
@@ -34,6 +35,7 @@ export default function RootLayout({
 
       <body className="">
         <main className="flex flex-col w-screen overflow-x-hidden justify-center items-center relative">
+          <div className="noise w-screen h-full absolute"></div>
           <HeaderAnimation />
           {children}
 
