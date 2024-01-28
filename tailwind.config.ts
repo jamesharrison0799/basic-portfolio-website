@@ -34,7 +34,7 @@ const config: Config = {
           text:"white",
           "base-100":"white",
           "neutral": "#C7C7C7",
-          background:"black"
+          background:"#050505"
           
         },
       },

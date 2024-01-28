@@ -9,16 +9,8 @@ export const metadata: Metadata = {
 
 function HeaderAnimation() {
   return (
-    <div className="absolute pointer-events-none scale-x-150 -top-32  flex  justify-center opacity-40 w-full ">
-      
-      <div className="flex -space-y-5 amazing-rays ">
-        <div className=" h-96 w-32 bg-pink-500 scale-y-150 blur-lg -rotate-45"></div>
-        <div className=" h-96 w-48 bg-red-500  scale-y-150 blur-2xl -rotate-45"></div>
-        <div className=" h-96 w-16 bg-yellow-500 scale-y-150 blur-md -rotate-45"></div>
-        <div className=" h-96 w-12 bg-green-500 scale-y-150 blur-xl -rotate-45"></div>
-        <div className=" h-96 w-32 bg-blue-500 scale-y-150 blur-2xl -rotate-45"></div>
-      </div>
-    </div>
+    // <div className="absolute pointer-events-none scale-x-150 -top-32  flex  justify-center opacity-40 w-full ">
+      <div><div className="absolute scale-150 gap-15 pointer-events-none -mb-10 -mt-28 -ml-20 flex -rotate-45 justify-center amazing-rays"><div className="h-48 w-8 scale-150 bg-pink-500"></div><div className="h-56 w-8 scale-150 bg-red-500"></div><div className="h-64 w-8 scale-150 bg-yellow-500"></div><div className="h-72 w-8 scale-150 bg-green-500"></div><div className="h-100 w-20 scale-150 bg-blue-500"></div></div></div>
   )
 }
 

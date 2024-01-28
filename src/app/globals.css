@@ -47,14 +47,13 @@ h1 {
 
 
 .amazing-rays {
-    mix-blend-mode: luminosity;
-    background-size: 1589px 383px;
-    background-repeat: no-repeat;
-    opacity: .3;
+    mix-blend-mode: exclusion;
+    opacity: .35;
+    /* filter: hue-rotate(540deg) saturate(7.3); */
+    animation: rotate-hue 20s ease-out infinite; 
     filter: hue-rotate(540deg) saturate(7.3);
-    animation: rotate-hue 15s ease-out infinite;
-    
-    
+    background-position: calc(50% + 90px) top;
+    background-size: 1589px 383px;
 }
 
 .dark .amazing-rays {
@@ -64,7 +63,7 @@ h1 {
 
   @keyframes rotate-hue {
     0% {
-        filter: hue-rotate(540deg) saturate(7.3);
+        filter:  blur(30px) saturate(7)  hue-rotate(540deg);
         --accent-color: red
     }
 
@@ -73,40 +72,15 @@ h1 {
     }
 
     to {
-        filter: hue-rotate(180deg) saturate(7.3)
+        filter: blur(30px) saturate(7)  hue-rotate(180deg);
     }
 }
 
 
 
-  @keyframes auroraAnimation {
-    0% {
-      filter: hue-rotate(0deg) saturate(7) blur(30px) ; /* Initial values */
-        ;
-    }
-    25% {
-      filter: hue-rotate(180deg) saturate(7) blur(30px) ; /* Midpoint values */
-    }
-    50% {
-      filter: hue-rotate(360deg) saturate(7)  blur(30px); /* Final values */
-       ; 
-    }
-    35% {
-        filter: hue-rotate(180deg) saturate(7) blur(30px) ; /* Initial values */
-      }
-    100% {
-        filter: hue-rotate(0deg) saturate(7) blur(30px) ; /* Midpoint values */
-         ;
-      }
-  }
-  
-  .aurora {
-    animation: auroraAnimation 50s infinite; /* Adjust timing and iteration as needed */
-  }
-
   .noise {
     background-image: url(/noise.png);
     background-repeat: repeat;
     background-size: 182px;
-    opacity: 0.025;
+    opacity: 0.015;
 }
