@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex flex-col h-full gap-10 justify-start ">
             <div className="pt-10 flex flex-col gap-4">
               <span className="text-4xl">Hey, Im Jimbaux</span>
-              <span className="text-xl">Lovley to meet you. I'm a stoner getting baked in me bedroom. #GME</span>
+              <span className="text-xl">Lovley to meet you. Im a stoner getting baked in me bedroom. #GME</span>
             </div>
 
             {/* blog */}
