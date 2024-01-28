@@ -9,17 +9,20 @@ export const metadata: Metadata = {
 
 function HeaderAnimation() {
   return (
-    <div className="absolute pointer-events-none -top-24 flex -rotate-45 justify-between aurora scale-150 opacity-20">
-      <div className="flex gap-20">
-        <div className="h-96 w-16 bg-pink-500 scale-150 -rotate-45"></div>
-        <div className="h-96 w-16 bg-red-500 scale-150 -rotate-45"></div>
-        <div className="h-96 w-16 bg-yellow-500 scale-150 -rotate-45"></div>
-        <div className="h-96 w-16 bg-green-500 scale-150 -rotate-45"></div>
-        <div className="h-96 w-16 bg-blue-500 scale-150 -rotate-45"></div>
+    <div className="absolute pointer-events-none scale-x-150 -top-0  flex  justify-center opacity-60 w-full ">
+      <div className="flex -space-y-5 amazing-rays ">
+        <div className=" h-56 w-32 bg-pink-500 scale-y-150 blur-lg -rotate-45"></div>
+        <div className=" h-60 w-32 bg-red-500  scale-y-150 blur-2xl -rotate-45"></div>
+        <div className=" h-64 w-32 bg-yellow-500 scale-y-150 blur-md -rotate-45"></div>
+        <div className=" h-72 w-32 bg-green-500 scale-y-150 blur-xl -rotate-45"></div>
+        <div className=" h-78 w-32 bg-blue-500 scale-y-150 blur-2xl -rotate-45"></div>
       </div>
     </div>
   )
 }
+
+
+
 
 export default function RootLayout({
   children,
@@ -29,8 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body>
-        <main className="flex flex-col justify-center items-center relative overflow-hidden">
+      <body className="">
+        <main className="flex flex-col w-screen overflow-x-hidden justify-center items-center relative">
           <HeaderAnimation />
           {children}
 

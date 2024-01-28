@@ -5,42 +5,88 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.grotesk{
+    font-family:
+    'space-grotesk-variable',
+    sans-serif;
+}
 h1 {
     font-family:
     'space-grotesk-variable',
     sans-serif;
-    mix-blend-mode: luminosity;
   }
   
   h2 {
     font-family: "noto-sans-oriya", sans-serif;
-    mix-blend-mode: luminosity;
     
   }
+
+  p {
+    font-family: "noto-sans-oriya", sans-serif;
+  }
+
+
+.amazing-rays {
+    mix-blend-mode: luminosity;
+    background-size: 1589px 383px;
+    background-repeat: no-repeat;
+    opacity: .3;
+    filter: hue-rotate(540deg) saturate(7.3);
+    animation: rotate-hue 15s ease-out infinite;
+    
+    
+}
+
+.dark .amazing-rays {
+    opacity: .35
+}
+
+
+  @keyframes rotate-hue {
+    0% {
+        filter: hue-rotate(540deg) saturate(7.3);
+        --accent-color: red
+    }
+
+    50% {
+        --accent-color: green
+    }
+
+    to {
+        filter: hue-rotate(180deg) saturate(7.3)
+    }
+}
+
 
 
   @keyframes auroraAnimation {
     0% {
-      filter: hue-rotate(0deg) saturate(1) blur(70px); /* Initial values */
-      transform: scaleX(1)  ;
+      filter: hue-rotate(0deg) saturate(7) blur(30px) ; /* Initial values */
+        ;
     }
     25% {
-      filter: hue-rotate(180deg) saturate(2) blur(70px); /* Midpoint values */
+      filter: hue-rotate(180deg) saturate(7) blur(30px) ; /* Midpoint values */
     }
     50% {
-      filter: hue-rotate(360deg) saturate(3) blur(70px); /* Final values */
-      transform: scaleX(1.5) ; 
+      filter: hue-rotate(360deg) saturate(7)  blur(30px); /* Final values */
+       ; 
     }
-    75% {
-        filter: hue-rotate(180deg) saturate(2) blur(70px); /* Initial values */
+    35% {
+        filter: hue-rotate(180deg) saturate(7) blur(30px) ; /* Initial values */
       }
     100% {
-        filter: hue-rotate(0deg) saturate(1) blur(70px); /* Midpoint values */
-        transform: scaleX(1) ;
+        filter: hue-rotate(0deg) saturate(7) blur(30px) ; /* Midpoint values */
+         ;
       }
   }
   
   .aurora {
     animation: auroraAnimation 50s infinite; /* Adjust timing and iteration as needed */
   }
+
+  .noise {
+    background-image: url(/noise.png);
+    background-repeat: repeat;
+    background-size: 182px;
+    opacity: 0.025;
+}

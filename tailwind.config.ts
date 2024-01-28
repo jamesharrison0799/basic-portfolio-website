@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -15,6 +16,30 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "white",
+          secondary: "teal",
+          "base-100":"black",
+          "neutral": "gray",
+          background: "white"
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          primary: "red",
+          secondary: "teal",
+          text:"white",
+          "base-100":"white",
+          "neutral": "gray",
+          background:"black"
+          
+        },
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 };
 export default config;
