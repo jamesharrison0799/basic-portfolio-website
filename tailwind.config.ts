@@ -33,7 +33,7 @@ const config: Config = {
           secondary: "teal",
           text:"white",
           "base-100":"white",
-          "neutral": "gray",
+          "neutral": "#C7C7C7",
           background:"black"
           
         },
