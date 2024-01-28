@@ -1,20 +1,26 @@
+import BlogPostList from "./components/BlogPostList";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+
 
 
 function HeroContent() {
   return (
     <div className="pt-10 flex flex-col gap-4">
-      <span className="text-4xl">Hey, Im Jimbaux</span>
-      <span className="text-xl">Lovley to meet you. Im a stoner getting baked in me bedroom. #GME</span>
+      <h1 className="text-4xl font-bold">Hey, Im Jimbaux</h1>
+      <h2 className="text-xl text-gray-500">Lovley to meet you. Im a web dev making heavy websites.</h2>
     </div>
   )
 }
 
 function Blog() {
   return (
-    <div className="flex items-center justify-center">
-      <span className="text-sm text-gray-400 text-center">Sorry, there are no blogs avaliable at this time.<br />ERROR 420 - STONED IMMACULATE</span>
+    <div className="flex flex-col items-center justify-start gap-10">
+      {/* <span className="text-sm text-gray-400 text-center">Sorry, there are no blogs avaliable at this time.<br />ERROR 420 - STONED IMMACULATE</span> */}
+      <BlogPostList title={"Post One"} desc={"It’s been a long time since I’ve published a blog post. Two whole years. Now we’ve reached 2024, it’s time for a complete refresh."} date={"28 Jan 24"} />
+      <BlogPostList title={"Post One"} desc={"It’s been a long time since I’ve published a blog post. Two whole years. Now we’ve reached 2024, it’s time for a complete refresh."} date={"28 Jan 24"} />
+      <BlogPostList title={"Post One"} desc={"It’s been a long time since I’ve published a blog post. Two whole years. Now we’ve reached 2024, it’s time for a complete refresh."} date={"28 Jan 24"} />
+
     </div>
 
   )

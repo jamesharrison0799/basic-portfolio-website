@@ -1,55 +1,46 @@
+@import url("https://use.typekit.net/ded1uti.css");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.img-overlay {
-    position: relative;
-    overflow: hidden
-}
 
-.amazing-rays,.img-overlay:after {
-    background-image: url("/download.gif")
-}
+h1 {
+    font-family:
+    'space-grotesk-variable',
+    sans-serif;
+    mix-blend-mode: luminosity;
+  }
+  
+  h2 {
+    font-family: "noto-sans-oriya", sans-serif;
+    mix-blend-mode: luminosity;
+    
+  }
 
-.img-overlay:after {
-    content: "";
-    background-size: 126% 115%;
-    opacity: 15%;
-    --tw-blur: blur(60px);
-    filter: blur(8px) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-}
 
-.amazing-rays,.img-overlay:after {
-    pointer-events: none;
-    position: absolute;
-    inset: 0
-}
-
-.amazing-rays {
-    mix-blend-mode: exclusion;
-    background-size: 1589px 383px;
-    background-repeat: no-repeat;
-    background-position: calc(50% + 90px) top;
-    opacity: .3;
-    filter: hue-rotate(540deg) saturate(7.3);
-    animation: rotate-hue 20s ease-out infinite
-}
-
-.dark .amazing-rays {
-    opacity: .35
-}
-
-@keyframes rotate-hue {
+  @keyframes auroraAnimation {
     0% {
-        filter: hue-rotate(540deg) saturate(7.3);
-        --accent-color: red
+      filter: hue-rotate(0deg) saturate(1) blur(70px); /* Initial values */
+      transform: scaleX(1)  ;
     }
-
+    25% {
+      filter: hue-rotate(180deg) saturate(2) blur(70px); /* Midpoint values */
+    }
     50% {
-        --accent-color: green
+      filter: hue-rotate(360deg) saturate(3) blur(70px); /* Final values */
+      transform: scaleX(1.5) ; 
     }
-
-    to {
-        filter: hue-rotate(180deg) saturate(7.3)
-    }
-}
+    75% {
+        filter: hue-rotate(180deg) saturate(2) blur(70px); /* Initial values */
+      }
+    100% {
+        filter: hue-rotate(0deg) saturate(1) blur(70px); /* Midpoint values */
+        transform: scaleX(1) ;
+      }
+  }
+  
+  .aurora {
+    animation: auroraAnimation 50s infinite; /* Adjust timing and iteration as needed */
+  }
