@@ -29,7 +29,7 @@ const config: Config = {
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          primary: "red",
+          primary: "black",
           secondary: "teal",
           text:"white",
           "base-100":"white",

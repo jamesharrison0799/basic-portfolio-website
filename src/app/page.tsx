@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 function HeroContent() {
   return (
-    <div className="pt-10 flex flex-col gap-4">
+    <div className="pt-4 flex flex-col gap-4">
       <h1 className="text-4xl font-bold text-base-100">Hey, Im Jimbaux</h1>
       <h2 className="text-xl text-neutral">Lovley to meet you. Im a web dev making heavy websites.</h2>
     </div>
