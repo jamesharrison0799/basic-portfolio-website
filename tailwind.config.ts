@@ -19,14 +19,14 @@ const config: Config = {
   daisyui: {
     themes: [
       {
-        light: {
-          ...require("daisyui/src/theming/themes")["light"],
-          primary: "white",
-          secondary: "teal",
-          "base-100":"black",
-          "neutral": "gray",
-          background: "white"
-        },
+        // light: {
+        //   ...require("daisyui/src/theming/themes")["light"],
+        //   primary: "white",
+        //   secondary: "teal",
+        //   "base-100":"black",
+        //   "neutral": "gray",
+        //   background: "white"
+        // },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
           primary: "#535353",
@@ -34,7 +34,7 @@ const config: Config = {
           text:"white",
           "base-100":"white",
           "neutral": "#C7C7C7",
-          background:"black"
+          background:"#050505"
           
         },
       },

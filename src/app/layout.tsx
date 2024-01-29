@@ -17,6 +17,7 @@ function HeaderAnimation() {
         <div className=" h-96 w-32 rounded-xl bg-gradient-to-b from-yellow-500 to-yellow-500/20  scale-y-150 blur-md -rotate-45"></div>
         <div className=" h-96 w-32 rounded-xl bg-gradient-to-b from-green-500 to-green-500/20   scale-y-150 blur-xl  -rotate-45"></div>
         <div className=" h-96 w-32 rounded-xl bg-gradient-to-b from-blue-500  to-blue-500/20 scale-y-150 blur-2xl -rotate-45"></div>
+        
       </div>
     </div>
   )
@@ -34,8 +35,9 @@ export default function RootLayout({
     <html lang="en">
 
       <body className="">
+                  <div className="noise w-screen h-full absolute"></div>
+
         <main className="flex flex-col w-screen overflow-x-hidden justify-center items-center relative">
-          <div className="noise w-screen h-full absolute"></div>
           <HeaderAnimation />
           {children}
 
