@@ -6,7 +6,7 @@ import * as Resume from './components/Resume'
 function HeroContent() {
   return (
     <div className="pt-4 flex flex-col gap-4">
-      <h1 className="text-4xl font-bold text-base-100">Hello, I'm {Resume.bio.title}</h1>
+      <h1 className="text-4xl font-bold text-base-100">{`Hello, I'm ${Resume.bio.title}`}</h1>
       <p className="text-xl text-neutral text-wrap">{Resume.bio.tagline}</p>
     </div>
   )
