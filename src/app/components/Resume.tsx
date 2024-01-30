@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { resume } from "../content/resume";
+import Link from "next/link";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 
 const bio = {
@@ -76,66 +78,47 @@ function Education() {
     )
 }
 
-function Skills() {
+type ListItem = {
+    label: string;
+    link: string | null;
+};
 
-    const skills = resume.skills
-
+type ListSectionProps = {
+    list: ListItem[];
+    label: string;
+};
+function ListSection({ list, label }: ListSectionProps) {
     return (
         <div className="flex flex-col gap-2">
-            <h2 className="text-base-100 font-bold text-xl">Skills</h2>
+            <h2 className="text-base-100 font-bold text-xl">{label}</h2>
             <ul className="flex flex-col gap-2">
-                {skills.map((item, index) => {
-                    return (
-                        <li key={index} className='hover:scale-105 hover:translate-x-2 hover:text-base-100'>{item}</li>
+                {list.map((item, index) => {
+                    if (item.link != null) {
+                        return (
+                            <Link href={item.link} key={index}>
+                                <div className="w-full flex hover:scale-105 group">
+                                    <div className="w-4/5">{item.label}</div>
+                                    <div className="w-1/5">
+                                        <div className="flex items-center justify-center h-full opacity-15 group-hover:opacity-100">
+                                            <BsBoxArrowUpRight />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        )
+                    } else {
+                        return (
+                            <li key={index} className=' '>{item.label}</li>
+                        )
+                    }
 
-                    )
                 })}
             </ul>
         </div>
     )
 }
 
-function Interests() {
 
-    const interests = resume.interests
-
-    return (
-        <>
-            <div className="flex flex-col gap-2">
-                <h2 className="text-base-100 font-bold text-xl">Interests</h2>
-                <ul className="flex flex-col gap-2">
-                    {interests.map((item, index) => {
-                        return (
-                            <li key={index} className='hover:scale-105 hover:translate-x-2 hover:text-base-100'>{item}</li>
-
-                        )
-                    })}
-                </ul>
-            </div>
-        </>
-    )
-}
-
-function Certificates() {
-
-    const certificates = resume.certificates
-
-    return (
-        <>
-            <div className="flex flex-col gap-2">
-                <h2 className="text-base-100 font-bold text-xl">Certificates</h2>
-                <ul className="flex flex-col gap-2">
-                    {certificates.map((item, index) => {
-                        return (
-                            <li key={index} className='hover:scale-105 hover:translate-x-2 hover:text-base-100 cursor-pointer'>{item}</li>
-
-                        )
-                    })}
-                </ul>
-            </div>
-        </>
-    )
-}
 
 
 function Section() {
@@ -146,16 +129,16 @@ function Section() {
                     <Experience />
                 </div>
                 <div className="md:w-2/5 flex flex-col gap-10">
-                    <Skills />
-                    <Interests />
-                    <Certificates />
+                    <ListSection list={resume.skills} label="Skills" />
+                    <ListSection list={resume.interests} label="Interests" />
+                    <ListSection list={resume.certificates} label="Certificates" />
                 </div>
             </div>
+            <Education />
             <div>
-                <Education />
             </div>
         </div>
     )
 }
 
-export { bio, Experience, Education, Skills, Interests, Certificates, Section }
+export { bio, Experience, Education, Section }

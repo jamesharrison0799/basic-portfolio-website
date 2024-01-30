@@ -31,18 +31,10 @@ function Blog() {
 
 export default function Home() {
   return (
-
-    <div className="w-full max-w-2xl h-screen relative px-10 md:px-0">
-      <div className="flex flex-col justify-between ">
-        <Navbar />
-        <div className="flex flex-col gap-10 justify-start mb-20">
+          <>
           <HeroContent />
-          <Resume.Section/>
+          <Resume.Section />
           {/* <Blog /> */}
-        </div>
-      </div>
-      <Footer />
-
-    </div>
+          </>
   );
 }
