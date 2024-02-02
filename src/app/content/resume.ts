@@ -47,7 +47,7 @@ export type Resume = {
   certificates: string[];
 };
 
-//supported social things: GitHub, 
+//supported social things: GitHub, Discord
 export const resume = {
   title: "James Harrison",
   tagline:
