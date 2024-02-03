@@ -66,7 +66,7 @@ export default function Home() {
     <>
       <HeroContent />
       <Resume.Section />
-      <Gallery />
+      {/* <Gallery /> */}
       {/* <Blog /> */}
     </>
   );
