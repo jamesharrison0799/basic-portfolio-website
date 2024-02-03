@@ -36,7 +36,7 @@ function Blog() {
 
 function Gallery() {
 
-  const imagesDirectory = path.join(process.cwd(), 'public', 'gallery')
+  const imagesDirectory = path.join(process.cwd(), 'public', 'gallery/jpeg')
 
   const imageFileNames = fs.readdirSync(imagesDirectory);
 

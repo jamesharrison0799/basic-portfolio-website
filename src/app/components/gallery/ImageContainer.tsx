@@ -30,7 +30,7 @@ export default function ImageContainer({ fileName, altText }: ImageContainerProp
         return (
             <div className="hover:cursor-pointer">
                 <Image
-                    src={`/gallery/${fileName}`}
+                    src={`/gallery/jpeg/${fileName}`}
                     alt={altText}
                     onClick={toggleFullScreen} // Click to toggle full screen
                     width={1000}
