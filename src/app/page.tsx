@@ -49,9 +49,13 @@ function Gallery() {
       </div>
 
       <div className="flex flex-wrap gap-10">
+
         {imageFiles.map((fileName, index) => (
-          <span key={index} className=""><ImageContainer altText="" fileName={fileName} /></span>
+          <div className="h-full" key={index}>
+            <span className=""><ImageContainer altText="" fileName={fileName} /></span>
+          </div>
         ))}
+
         <div className="flex w-full justify-center">
           <span>View more on <a className="underline" href="https://www.flickr.com/photos/jamesharrison">Flickr</a></span>
         </div>
@@ -66,7 +70,7 @@ export default function Home() {
     <>
       <HeroContent />
       <Resume.Section />
-      {/* <Gallery /> */}
+      <Gallery />
       {/* <Blog /> */}
     </>
   );
