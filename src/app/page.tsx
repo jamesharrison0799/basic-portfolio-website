@@ -2,6 +2,11 @@ import BlogPostList from "./components/BlogPostList";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import * as Resume from './components/Resume'
+import Image from "next/image";
+import ImageContainer from "./components/gallery/ImageContainer";
+import path from "path"
+import fs from 'fs'
+
 
 function HeroContent() {
   return (
@@ -29,12 +34,40 @@ function Blog() {
   )
 }
 
+function Gallery() {
+
+  const imagesDirectory = path.join(process.cwd(), 'public', 'gallery')
+
+  const imageFileNames = fs.readdirSync(imagesDirectory);
+
+  const imageFiles = imageFileNames.filter(fileName => /\.(jpg|jpeg|png|gif)$/i.test(fileName));
+
+  return (
+    <div>
+      <div className="pb-10">
+        <h1 className="text-2xl font-bold text-base-100">Gallery</h1>
+      </div>
+
+      <div className="flex flex-wrap gap-10">
+        {imageFiles.map((fileName, index) => (
+          <span key={index} className=""><ImageContainer altText="" fileName={fileName} /></span>
+        ))}
+        <div className="flex w-full justify-center">
+          <span>View more on <a className="underline" href="https://www.flickr.com/photos/jamesharrison">Flickr</a></span>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
 export default function Home() {
   return (
-          <>
-          <HeroContent />
-          <Resume.Section />
-          {/* <Blog /> */}
-          </>
+    <>
+      <HeroContent />
+      <Resume.Section />
+      <Gallery />
+      {/* <Blog /> */}
+    </>
   );
 }

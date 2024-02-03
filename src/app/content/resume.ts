@@ -168,7 +168,7 @@ export const resume = {
     { label: "Photography", link: "https://www.flickr.com/photos/jamesharrison/" },
   ],
   interests: [
-    { label: "Motorcycle Maintenance and Fabrication", link: null },
+    { label: "Motorcycle Maintenance and Fabrication", link: "http://instagram.com/james_cbf" },
     { label: "Photography", link: null },
     { label: "Smart Home Intergrations", link: null },
     { label: "DIY / Restoration", link: null },
@@ -177,4 +177,7 @@ export const resume = {
   certificates: [
     { label:"NCFE L2 - Understanding Climate Change and Envrionmental Awareness", link: null },
   ],
+  projects:[
+    {label:"WhoWantsTo.Be",link:"http://whowantsto.be",description:"Hot Seat style game for adult education",media:["/projects/media/image.jpg"]} //media list of image or video hyperlinks
+  ]
 };
